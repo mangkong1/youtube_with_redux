@@ -8,7 +8,6 @@ import Profile from "./assets/images/profile.jpeg";
 import Camcoder from "./assets/images/camcoder.png";
 import Bell from "./assets/images/bell.png";
 import SoundSearchIcon from "./assets/images/mic.png";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,9 +15,7 @@ const Header = () => {
       <S.HeaderContainer>
         <S.HeaderLeft>
           <S.MenuIcon src={ListIcon} />
-          <Link to="/">
-            <S.YoutubeLogo src={YoutubeLogo} />
-          </Link>
+          <S.YoutubeLogo src={YoutubeLogo} />
           <S.Country>KR</S.Country>
         </S.HeaderLeft>
 
