@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SubscribeBtnContainer = styled.button<{ $active: boolean }>`
+export const ToggleBtnContainer = styled.button<{ $active: boolean }>`
   background-color: ${(props) => (props.$active ? "black" : "white")};
   color: ${(props) => (props.$active ? "white" : "black")};
   width: 56px;

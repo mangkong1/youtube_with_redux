@@ -126,3 +126,14 @@ export const HeaderIcon = styled.img`
   height: 24px;
   margin: 8px;
 `;
+
+export const LoginBtn = styled.button`
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 8px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px;
+  cursor: pointer;
+`;

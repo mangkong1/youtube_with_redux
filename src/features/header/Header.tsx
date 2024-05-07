@@ -8,8 +8,17 @@ import Profile from "./assets/images/profile.jpeg";
 import Camcoder from "./assets/images/camcoder.png";
 import Bell from "./assets/images/bell.png";
 import SoundSearchIcon from "./assets/images/mic.png";
+import { useSelector } from "react-redux";
+import useLogin from "./hooks/UseLogin";
+
+interface HeaderProps {
+  user_data: any | null;
+}
 
 const Header = () => {
+  const userData = useSelector((state: HeaderProps) => state.user_data);
+  const requestLogin = useLogin();
+
   return (
     <>
       <S.HeaderContainer>
@@ -37,7 +46,7 @@ const Header = () => {
         <S.HeaderRight>
           <S.HeaderIcon src={Camcoder} />
           <S.HeaderIcon src={Bell} />
-          <S.Profile src={Profile} />
+          {userData ? <S.Profile src={Profile} /> : <S.LoginBtn onClick={requestLogin}>로그인</S.LoginBtn>}
         </S.HeaderRight>
       </S.HeaderContainer>
     </>

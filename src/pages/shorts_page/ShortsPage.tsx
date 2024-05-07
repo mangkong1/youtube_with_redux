@@ -2,7 +2,7 @@ import React from "react";
 import ShortsElem from "./views/ShortsElem";
 import { MainShortsContainer } from "./styles/ShortsStyle";
 import Data from "./services/ShortsData";
-import SubscribeBtn from "../../components/OnOffBtn";
+import ToggleBtn from "../../components/OnOffBtn";
 import { DataType } from "./services/ShortsData"; // Import the DataType interface
 
 const ShortsPage = () => {
@@ -12,7 +12,7 @@ const ShortsPage = () => {
     <MainShortsContainer>
       {sortedData.map((elem) => (
         <ShortsElem key={elem.id} data={elem}>
-          <SubscribeBtn subscribeState={elem.subscribeState} data={elem} />
+          <ToggleBtn subscribeState={elem.subscribeState} data={elem} toggleOnText="구독 취소" toggleOffText="구독" />
         </ShortsElem>
       ))}
     </MainShortsContainer>
