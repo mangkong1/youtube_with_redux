@@ -1,11 +1,11 @@
 import React from "react";
-import * as S from "../styles/ShortsBtnsStyle";
-import likeIcon from "../assets/images/like_icon.png";
-import hateIcon from "../assets/images/hate_icon.png";
-import commentIcon from "../assets/images/comment_icon.png";
-import shareIcon from "../assets/images/share_icon.png";
-import moreIcon from "../assets/images/more_icon.png";
-import useChangeBtnState from "../hooks/ShortsBtnsHooks";
+import * as S from "./styles/ShortsBtnsStyle";
+import likeIcon from "./assets/images/like_icon.png";
+import hateIcon from "./assets/images/hate_icon.png";
+import commentIcon from "./assets/images/comment_icon.png";
+import shareIcon from "./assets/images/share_icon.png";
+import moreIcon from "./assets/images/more_icon.png";
+import useChangeBtnState from "./hooks/ShortsBtnsHooks";
 
 const ShortsBtns = () => {
   const { isLike, isHate, likeCount, handleLikeActive, handleHateActive } = useChangeBtnState();

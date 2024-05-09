@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Data from "../channel_home/services/ChannelHomeData";
+import Data from "./services/ChannelHomeData";
 import { HomeContainer, HomeIndex } from "./styles/ChannelHomeStyle";
 import ChannelHomeElem from "./views/ChannelHomeElem";
 

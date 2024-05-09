@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import ChannelHome from "../../../features/channel_home/ChannelHome";
+import ChannelHome from "../../../features/channel_home";
 import tabs from "../../../features/channel_tab/services/ChannelTabData";
 
 const ChannelRouter = () => (

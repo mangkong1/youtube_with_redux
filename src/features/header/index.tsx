@@ -12,12 +12,17 @@ import { useSelector } from "react-redux";
 import useLogin from "./hooks/UseLogin";
 
 interface HeaderProps {
+  userReducer: UserDataProps;
+}
+
+interface UserDataProps {
   user_data: any | null;
 }
 
 const Header = () => {
-  const userData = useSelector((state: HeaderProps) => state.user_data);
+  const userData = useSelector((state: HeaderProps) => state.userReducer.user_data); //combineReducers 사용시 state를 이런 식으로 불러오는
   const requestLogin = useLogin();
+  console.log(userData);
 
   return (
     <>

@@ -6,7 +6,7 @@ interface UserData {
 export const setUserData = (user_data: UserData) => {
   return {
     type: "SET_USER_DATA",
-    user_data,
+    data: user_data,
   };
 };
 

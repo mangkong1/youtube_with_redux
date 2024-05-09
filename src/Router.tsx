@@ -1,13 +1,13 @@
 import React from "react";
-import MainPage from "./pages/main_page/MainPage";
-import ShortsPage from "./pages/shorts_page/ShortsPage";
-import ChannelPage from "./pages/channel_page/ChannelPage";
+import MainPage from "./pages/main_page/";
+import ShortsPage from "./pages/shorts_page";
+import ChannelPage from "./pages/channel_page";
 import { Routes, Route } from "react-router-dom";
 
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainPage />} />
+      <Route index element={<MainPage />} />
       <Route path="/shorts" element={<ShortsPage />} />
       <Route path="/subscribe" />
       <Route path="/mypage" />
@@ -17,3 +17,5 @@ const Router = () => {
 };
 
 export default Router;
+
+// 채널을 위한 url을 더 깊이 만들어서 필요없는 접근 방지(/channel/page/:channelName) 같은 느낌으로

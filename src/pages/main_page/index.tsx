@@ -1,5 +1,5 @@
 import React from "react";
-import MainElem from "../../features/main/views/MainElem";
+import MainElem from "../../features/main";
 import Data from "../../features/main/services/MainData";
 import { MainContainer } from "../../features/main/styles/MainStyle";
 import useSortedData from "./hooks/SortedData";

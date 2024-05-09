@@ -1,9 +1,9 @@
 import React from "react";
-import Home from "../../channel_home/ChannelHome";
-import Video from "../../channel_video/ChannelVideo";
-import Shorts from "../../channel_shorts/ChannelShorts";
-import Live from "../../channel_live/ChannelLive";
-import Podcast from "../../channel_podcast/ChannelPodcast";
+import Home from "../../channel_home/";
+import Video from "../../channel_video/";
+import Shorts from "../../channel_shorts/";
+import Live from "../../channel_live/";
+import Podcast from "../../channel_podcast/";
 
 const tabs = [
   { name: "홈", path: "home", component: <Home /> },
