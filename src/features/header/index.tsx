@@ -22,7 +22,7 @@ interface UserDataProps {
 const Header = () => {
   const userData = useSelector((state: HeaderProps) => state.userReducer.user_data); //combineReducers 사용시 state를 이런 식으로 불러오는
   const requestLogin = useLogin();
-  console.log(userData);
+  //userData현재 null값으로 나옴
 
   return (
     <>

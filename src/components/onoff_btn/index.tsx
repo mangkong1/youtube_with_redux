@@ -27,8 +27,9 @@ const ToggleBtn = (props: SetSubscribeStateProps) => {
 
   const handleSubscribe = () => {
     dispatch(setSubscribeState(!props.subscribeState));
+    console.log(props.subscribeState);
   };
-
+  // $active는 styled-components에서 props를 받아서 css를 적용할 때 사용하는 문법입니다.
   return (
     <ToggleBtnContainer $active={props.subscribeState} onClick={handleSubscribe}>
       {props.subscribeState ? props.toggleOnText : props.toggleOffText}

@@ -2,7 +2,7 @@ import React from "react";
 import ShortsElem from "./views/ShortsElem";
 import { MainShortsContainer } from "./styles/ShortsStyle";
 import Data from "./services/ShortsData";
-import ToggleBtn from "../../components/onoff_btn/OnOffBtn";
+import ToggleBtn from "../../components/onoff_btn";
 import { DataType } from "./services/ShortsData"; // Import the DataType interface
 
 const ShortsPage = () => {
