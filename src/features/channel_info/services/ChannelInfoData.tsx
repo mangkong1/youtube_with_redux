@@ -55,7 +55,7 @@ const Data: DataType[] = [
     channelName: "충주시",
     views: 11078,
     uploadDate: "2024-04-02",
-    subscribeState: true,
+    subscribeState: false,
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ const Data: DataType[] = [
     channelName: "충주시",
     views: 60037,
     uploadDate: "2024-04-09",
-    subscribeState: true,
+    subscribeState: false,
   },
   {
     id: 6,
@@ -77,7 +77,7 @@ const Data: DataType[] = [
     channelName: "충주시",
     views: 84009,
     uploadDate: "2024-04-16",
-    subscribeState: true,
+    subscribeState: false,
   },
   {
     id: 7,
@@ -88,7 +88,7 @@ const Data: DataType[] = [
     channelName: "코딩애플",
     views: 22033,
     uploadDate: "2024-04-03",
-    subscribeState: true,
+    subscribeState: false,
   },
   {
     id: 8,
@@ -99,7 +99,7 @@ const Data: DataType[] = [
     channelName: "코딩애플",
     views: 3120,
     uploadDate: "2024-04-10",
-    subscribeState: true,
+    subscribeState: false,
   },
   {
     id: 9,
@@ -110,7 +110,7 @@ const Data: DataType[] = [
     channelName: "코딩애플",
     views: 48000,
     uploadDate: "2024-03-17",
-    subscribeState: true,
+    subscribeState: false,
   },
   {
     id: 10,
@@ -121,7 +121,7 @@ const Data: DataType[] = [
     channelName: "기아타이거즈",
     views: 15000,
     uploadDate: "2024-04-04",
-    subscribeState: true,
+    subscribeState: false,
   },
   {
     id: 11,
@@ -132,7 +132,7 @@ const Data: DataType[] = [
     channelName: "기아타이거즈",
     views: 33000,
     uploadDate: "2024-04-11",
-    subscribeState: true,
+    subscribeState: false,
   },
   {
     id: 12,
@@ -143,7 +143,7 @@ const Data: DataType[] = [
     channelName: "기아타이거즈",
     views: 29000,
     uploadDate: "2024-03-18",
-    subscribeState: true,
+    subscribeState: false,
   },
 ];
 

@@ -5,18 +5,23 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import ToggleBtn from "../../components/onoff_btn/";
 
+interface SubscribeStateProps {
+  subscribeReducer: ChannelInfoProps;
+}
+
 interface ChannelInfoProps {
   channelMainImgSrc: string;
   channelImgSrc: string;
   channelName: string;
   children?: React.ReactNode;
+  subscribeState: boolean;
 }
 
 const ChannelInfo = (props: ChannelInfoProps) => {
   const { channelName } = useParams();
   const filteredData = Data.find((elem) => elem.channelName === channelName);
   const { channelMainImgSrc, channelImgSrc } = filteredData || { channelMainImgSrc: "", channelImgSrc: "" };
-  const subscribeState = useSelector((state: { subscribe: boolean }) => state.subscribe);
+  const subscribeState = useSelector((state: SubscribeStateProps) => state.subscribeReducer.subscribeState); //리덕스 store에서 subscribe 상태를 가져옴
 
   return (
     <>

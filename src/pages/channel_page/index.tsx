@@ -7,7 +7,7 @@ const ChannelPage = () => {
   return (
     <MainChannelContainer>
       <ChannelContainer>
-        <ChannelInfo channelMainImgSrc="" channelImgSrc="" channelName="" />
+        <ChannelInfo subscribeState={true} channelMainImgSrc="" channelImgSrc="" channelName="" />
         <ChannelTab />
       </ChannelContainer>
     </MainChannelContainer>

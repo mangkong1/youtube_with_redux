@@ -23,7 +23,7 @@ interface SetSubscribeStateProps {
 // };
 
 const ToggleBtn = (props: SetSubscribeStateProps) => {
-  const dispatch = useDispatch(); // Get the dispatch function
+  const dispatch = useDispatch(); // 리덕스 store상태 변경 가능
 
   const handleSubscribe = () => {
     dispatch(setSubscribeState(!props.subscribeState));

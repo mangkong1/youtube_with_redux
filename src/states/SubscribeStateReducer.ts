@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+// import { createStore } from "redux";
 
 interface SubscribeState {
   subscribeState: boolean;
@@ -9,11 +9,7 @@ interface SubscribeAction {
   subscribeState: boolean;
 }
 
-const initialSubscribeState: SubscribeState = {
-  subscribeState: false,
-};
-
-export const subscribeStateReducer = (state: SubscribeState = initialSubscribeState, action: SubscribeAction): SubscribeState => {
+export const subscribeStateReducer = (state: SubscribeState, action: SubscribeAction) => {
   switch (action.type) {
     case "SET_SUBSCRIBE_STATE":
       return { ...state, subscribeState: action.subscribeState };
@@ -22,4 +18,4 @@ export const subscribeStateReducer = (state: SubscribeState = initialSubscribeSt
   }
 };
 
-export const Store = createStore(subscribeStateReducer);
+// export const Store = createStore(subscribeStateReducer);
