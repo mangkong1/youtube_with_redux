@@ -1,5 +1,5 @@
 import React from "react";
-import { ChannelTabContainer, ChannelTabBtn } from "./styles/ChannelStyle";
+import { ChannelTabContainer, ChannelTabBtn } from "./styles/ChannelTabStyle";
 import useChangeTab from "./hooks/ChangeTabHook";
 import tabs from "./services/ChannelTabData";
 // import ChannelRouter from "../../../pages/channel/views/ChannelRouter";

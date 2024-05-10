@@ -9,12 +9,17 @@ interface SubscribeAction {
   subscribeState: boolean;
 }
 
-export const subscribeStateReducer = (state: SubscribeState, action: SubscribeAction) => {
+const initialState: SubscribeState = {
+  subscribeState: false,
+};
+
+export const subscribeStateReducer = (state: SubscribeState = initialState, action: SubscribeAction) => {
+  console.log(state);
   switch (action.type) {
     case "SET_SUBSCRIBE_STATE":
-      return { ...state, subscribeState: action.subscribeState };
+      return { ...state, subscribeState: !state.subscribeState };
     default:
-      return { subscribeState: false };
+      return state;
   }
 };
 

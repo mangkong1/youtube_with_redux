@@ -2,7 +2,7 @@ import React from "react";
 // import { useSetSubscribeState } from "./hooks/SetSubscribeState";
 import { ToggleBtnContainer } from "./styles/OnOffBtnStyle";
 import { DataType } from "../../features/channel_home/services/ChannelHomeData";
-import { setSubscribeState } from "../../states/SubscribeStateAction";
+import { setSubscribeState } from "../../states/subscribe_state/SubscribeStateAction";
 import { useDispatch } from "react-redux";
 
 interface SetSubscribeStateProps {
@@ -27,7 +27,6 @@ const ToggleBtn = (props: SetSubscribeStateProps) => {
 
   const handleSubscribe = () => {
     dispatch(setSubscribeState(!props.subscribeState));
-    console.log(props.subscribeState);
   };
   // $active는 styled-components에서 props를 받아서 css를 적용할 때 사용하는 문법입니다.
   return (

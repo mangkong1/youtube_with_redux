@@ -10,6 +10,7 @@ import Bell from "./assets/images/bell.png";
 import SoundSearchIcon from "./assets/images/mic.png";
 import { useSelector } from "react-redux";
 import useLogin from "./hooks/UseLogin";
+import useLogout from "./hooks/UseLogout";
 
 interface HeaderProps {
   userReducer: UserDataProps;
@@ -22,6 +23,7 @@ interface UserDataProps {
 const Header = () => {
   const userData = useSelector((state: HeaderProps) => state.userReducer.user_data); //combineReducers 사용시 state를 이런 식으로 불러오는
   const requestLogin = useLogin();
+  const requestLogout = useLogout();
   //userData현재 null값으로 나옴
 
   return (
@@ -51,7 +53,14 @@ const Header = () => {
         <S.HeaderRight>
           <S.HeaderIcon src={Camcoder} />
           <S.HeaderIcon src={Bell} />
-          {userData ? <S.Profile src={Profile} /> : <S.LoginBtn onClick={requestLogin}>로그인</S.LoginBtn>}
+          {userData ? (
+            <>
+              <S.Profile src={Profile} />
+              <S.LoginBtn onClick={requestLogout}>로그아웃</S.LoginBtn>{" "}
+            </>
+          ) : (
+            <S.LoginBtn onClick={requestLogin}>로그인</S.LoginBtn>
+          )}
         </S.HeaderRight>
       </S.HeaderContainer>
     </>

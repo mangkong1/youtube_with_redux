@@ -62,6 +62,7 @@ export const ChannelTabContainer = styled.div`
   width: 100%;
   justify-content: flex-start;
   margin-top: 30px;
+  border-bottom: 1px solid gray;
 `;
 
 export const ChannelTabBtn = styled.div<{ $active?: boolean }>`
