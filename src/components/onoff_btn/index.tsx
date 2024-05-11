@@ -1,9 +1,9 @@
-import React from "react";
-// import { useSetSubscribeState } from "./hooks/SetSubscribeState";
-import { ToggleBtnContainer } from "./styles/OnOffBtnStyle";
+import { useDispatch } from "react-redux";
+
+import S from "./styles";
+
 import { DataType } from "../../features/channel_home/services/ChannelHomeData";
 import { setSubscribeState } from "../../states/subscribe_state/SubscribeStateAction";
-import { useDispatch } from "react-redux";
 
 interface SetSubscribeStateProps {
   subscribeState: boolean;
@@ -11,16 +11,6 @@ interface SetSubscribeStateProps {
   toggleOnText: string;
   toggleOffText: string;
 }
-
-// const ToggleBtn = (props: SetSubscribeStateProps) => {
-//   const { isSubscribe, handleSubscribe } = useSetSubscribeState(props);
-
-//   return (
-//     <ToggleBtnContainer $active={isSubscribe} onClick={handleSubscribe}>
-//       {isSubscribe ? props.toggleOnText : props.toggleOffText}
-//     </ToggleBtnContainer>
-//   );
-// };
 
 const ToggleBtn = (props: SetSubscribeStateProps) => {
   const dispatch = useDispatch(); // 리덕스 store상태 변경 가능
@@ -30,9 +20,9 @@ const ToggleBtn = (props: SetSubscribeStateProps) => {
   };
   // $active는 styled-components에서 props를 받아서 css를 적용할 때 사용하는 문법입니다.
   return (
-    <ToggleBtnContainer $active={props.subscribeState} onClick={handleSubscribe}>
+    <S.ToggleBtnContainer $active={props.subscribeState} onClick={handleSubscribe}>
       {props.subscribeState ? props.toggleOnText : props.toggleOffText}
-    </ToggleBtnContainer>
+    </S.ToggleBtnContainer>
   );
 };
 

@@ -1,18 +1,19 @@
-import React from "react";
-import MainElem from "../../features/main";
-import Data from "../../features/main/services/MainData";
-import { MainContainer } from "../../features/main/styles/MainStyle";
+import S from "./styles";
+
 import useSortedData from "./hooks/UseSortedData";
+
+import MainElem from "../../features/main";
+import Data from "./services/MainPageData";
 
 const MainPage = () => {
   const sortedData = useSortedData(Data);
 
   return (
-    <MainContainer>
+    <S.MainContainer>
       {sortedData.map((elem) => (
         <MainElem key={elem.id} data={elem} />
       ))}
-    </MainContainer>
+    </S.MainContainer>
   );
 };
 

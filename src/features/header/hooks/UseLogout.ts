@@ -1,5 +1,5 @@
-import React from "react";
 import { useDispatch } from "react-redux";
+
 import { deleteUserData } from "../../../states/login_state/LoginAction";
 
 const useLogout = () => {

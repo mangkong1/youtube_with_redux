@@ -1,5 +1,4 @@
-import React from "react";
-import * as S from "../styles/AsideStyle";
+import S from "../styles";
 
 interface Props {
   data: {

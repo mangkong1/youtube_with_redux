@@ -1,6 +1,7 @@
 import styled from "styled-components";
+
 export default {
-  ChannelVideoContainer: styled.div`
+  HomeContainer: styled.div`
     display: flex;
     justify-content: flex-start;
     width: 100%;

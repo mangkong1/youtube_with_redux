@@ -1,7 +1,8 @@
-import React from "react";
-import * as S from "./styles/MainStyle";
 import { Link } from "react-router-dom";
+
+import S from "./styles";
 import DotIcon from "./assets/images/dot.png";
+
 import useWeeksAgo from "../../hooks/WeeksAgo";
 import useFormatViews from "../../hooks/FormatView";
 

@@ -1,5 +1,5 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
+
 import ChannelHome from "../../../features/channel_home";
 import ChannelVideo from "../../../features/channel_video";
 import tabs from "../../../features/channel_tab/services/ChannelTabData";

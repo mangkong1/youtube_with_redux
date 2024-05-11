@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import S from "../styles/ChannelVideoSortBtnStyle";
 import useSortState from "../hooks/UseSortState";
 

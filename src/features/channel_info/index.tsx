@@ -1,8 +1,9 @@
-import React from "react";
-import * as S from "./styles/ChannelInfoStyle";
-import Data from "./services/ChannelInfoData";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+
+import S from "./styles";
+import Data from "./services/ChannelInfoData";
+
 import ToggleBtn from "../../components/onoff_btn/";
 
 interface SubscribeStateProps {

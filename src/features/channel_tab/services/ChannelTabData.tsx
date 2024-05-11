@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "../../channel_home/";
 import Video from "../../channel_video/";
 import Shorts from "../../channel_shorts/";

@@ -1,7 +1,7 @@
-import React from "react";
 import { useParams } from "react-router-dom";
+
+import S from "./styles";
 import Data from "./services/ChannelHomeData";
-import { HomeContainer, HomeIndex } from "./styles/ChannelHomeStyle";
 import ChannelHomeElem from "./views/ChannelHomeElem";
 
 const ChannelHome = () => {
@@ -10,12 +10,12 @@ const ChannelHome = () => {
 
   return (
     <>
-      <HomeContainer>
-        <HomeIndex>추천영상</HomeIndex>
+      <S.HomeContainer>
+        <S.HomeIndex>추천영상</S.HomeIndex>
         {filteredData.map((elem) => (
           <ChannelHomeElem key={elem.id} data={elem} />
         ))}
-      </HomeContainer>
+      </S.HomeContainer>
     </>
   );
 };

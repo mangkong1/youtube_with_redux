@@ -1,35 +1,33 @@
 import styled from "styled-components";
+
 export default {
-  ChannelVideoContainer: styled.div`
+  MainContainer: styled.main`
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid black;
+    position: relative;
+    margin-top: 56px;
+    margin-left: 72px;
   `,
 
-  HomeIndex: styled.h1`
-    font-size: 20px;
-    font-weight: 700;
-    display: inline-block;
-    width: 100%;
-    margin-top: 24px;
+  MainSection: styled.section`
+    margin: 24px 12px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 350px;
   `,
 
   Thumbnail: styled.img`
-    width: 190px;
-    height: 118px;
+    width: 100%;
     border: 1px solid white;
     border-radius: 10px;
     object-fit: cover;
     aspect-ratio: 16/9;
-    margin-bottom: 5px;
   `,
 
   VideoInfoContainer: styled.article`
     display: flex;
-    flex-direction: column;
-    margin: 12px 0 24px 0;
+    margin-top: 10px;
   `,
 
   ChannelImg: styled.img`

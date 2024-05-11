@@ -1,8 +1,8 @@
-import React from "react";
-import * as S from "./styles/AsideStyle";
+import { Link } from "react-router-dom";
+
+import S from "./styles";
 import AsideData from "./services/AsideData";
 import AsideElem from "./views/AsideElem";
-import { Link } from "react-router-dom";
 
 const Aside = () => {
   return (

@@ -1,6 +1,7 @@
-import React from "react";
 import S from "./styles";
-// import { LoginBtn } from "./styles";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
 import ListIcon from "./assets/images/list.png";
 import YoutubeLogo from "./assets/images/yt_logo.png";
 import KeyBoard from "./assets/images/keyboard.png";
@@ -9,7 +10,6 @@ import Profile from "./assets/images/profile.jpeg";
 import Camcoder from "./assets/images/camcoder.png";
 import Bell from "./assets/images/bell.png";
 import SoundSearchIcon from "./assets/images/mic.png";
-import { useSelector } from "react-redux";
 import useLogin from "./hooks/UseLogin";
 import useLogout from "./hooks/UseLogout";
 
@@ -32,7 +32,9 @@ const Header = () => {
       <S.HeaderContainer>
         <S.HeaderLeft>
           <S.MenuIcon src={ListIcon} />
-          <S.YoutubeLogo src={YoutubeLogo} />
+          <Link to="/">
+            <S.YoutubeLogo src={YoutubeLogo} />
+          </Link>
           <S.Country>KR</S.Country>
         </S.HeaderLeft>
 

@@ -1,9 +1,10 @@
-import React from "react";
-import * as S from "../styles/ChannelHomeStyle";
+import { Link } from "react-router-dom";
+
+import S from "../styles";
 import DotIcon from "../assets/images/dot.png";
+
 import useWeeksAgo from "../../../hooks/WeeksAgo";
 import useFormatViews from "../../../hooks/FormatView";
-import { Link } from "react-router-dom";
 
 interface ChannelHomeElemProps {
   data: {

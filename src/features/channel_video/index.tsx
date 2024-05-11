@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
+
 import Data from "./services/ChannelVideoData";
-import { ChannelVideoContainer } from "./styles/ChannelVideoStyle";
+import S from "./styles/ChannelVideoStyle";
 import ChannelVideoElem from "./views/ChannelVideoElem";
 import ChannelVideoSortBtns from "./views/ChannelVideoSortBtn";
 import useSortState from "./hooks/UseSortState";
@@ -18,12 +19,12 @@ const ChannelVideo = () => {
 
   return (
     <>
-      <ChannelVideoContainer>
+      <S.ChannelVideoContainer>
         <ChannelVideoSortBtns />
         {filteredData.map((elem) => (
           <ChannelVideoElem key={elem.id} data={elem} />
         ))}
-      </ChannelVideoContainer>
+      </S.ChannelVideoContainer>
     </>
   );
 };
