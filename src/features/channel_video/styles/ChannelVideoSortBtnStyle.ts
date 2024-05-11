@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export default {
   ChannelVideoSortBtnContainer: styled.div`
@@ -7,7 +7,7 @@ export default {
     padding: 12px 0 0 0;
   `,
 
-  ChannelVideoSortBtn: styled.button`
+  ChannelVideoSortBtn: styled.button<{ isActive: boolean }>`
     margin-right: 12px;
     padding: 8px 12px;
     border: 1px solid black;
@@ -16,5 +16,13 @@ export default {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
+
+    ${(props) =>
+      props.isActive &&
+      css`
+        background-color: gray;
+        color: white;
+        border: 1px solid gray;
+      `}
   `,
 };

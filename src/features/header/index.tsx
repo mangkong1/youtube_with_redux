@@ -1,5 +1,6 @@
 import React from "react";
-import * as S from "./styles/HeaderStyle";
+import S from "./styles";
+// import { LoginBtn } from "./styles";
 import ListIcon from "./assets/images/list.png";
 import YoutubeLogo from "./assets/images/yt_logo.png";
 import KeyBoard from "./assets/images/keyboard.png";
@@ -56,10 +57,14 @@ const Header = () => {
           {userData ? (
             <>
               <S.Profile src={Profile} />
-              <S.LoginBtn onClick={requestLogout}>로그아웃</S.LoginBtn>{" "}
+              <S.LoginBtn logout onClick={requestLogout}>
+                로그아웃
+              </S.LoginBtn>
             </>
           ) : (
-            <S.LoginBtn onClick={requestLogin}>로그인</S.LoginBtn>
+            <S.LoginBtn login onClick={requestLogin}>
+              로그인
+            </S.LoginBtn>
           )}
         </S.HeaderRight>
       </S.HeaderContainer>
