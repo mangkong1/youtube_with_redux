@@ -1,15 +1,18 @@
 import React from "react";
-import * as S from "../styles/ChannelVideoSortBtnStyle";
+import S from "../styles/ChannelVideoSortBtnStyle";
+import useSortState from "../hooks/UseSortState";
 
-const ChannelVideoSortBtn = () => {
+const ChannelVideoSortBtns = () => {
+  const { sortByTime, sortByView } = useSortState();
+
   return (
     <>
       <S.ChannelVideoSortBtnContainer>
-        <S.ChannelVideoSortBtn>최신순</S.ChannelVideoSortBtn>
-        <S.ChannelVideoSortBtn>조회수순</S.ChannelVideoSortBtn>
+        <S.ChannelVideoSortBtn onClick={sortByTime}>최신순</S.ChannelVideoSortBtn>
+        <S.ChannelVideoSortBtn onClick={sortByView}>조회수순</S.ChannelVideoSortBtn>
       </S.ChannelVideoSortBtnContainer>
     </>
   );
 };
 
-export default ChannelVideoSortBtn;
+export default ChannelVideoSortBtns;

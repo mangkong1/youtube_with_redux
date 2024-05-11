@@ -4,6 +4,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { Store } from "./states";
+import { RecoilRoot } from "recoil";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
@@ -11,9 +12,11 @@ if (rootElement) {
   root.render(
     <>
       <BrowserRouter>
-        <Provider store={Store}>
-          <App />
-        </Provider>
+        <RecoilRoot>
+          <Provider store={Store}>
+            <App />
+          </Provider>
+        </RecoilRoot>
       </BrowserRouter>
     </>
   );
