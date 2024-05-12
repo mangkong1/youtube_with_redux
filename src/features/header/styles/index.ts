@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 //객체 내부에 선언하면 안됨
 interface LoginButtonProps {
-  login?: boolean;
-  logout?: boolean;
+  $login?: boolean;
+  $logout?: boolean;
 }
 
 export default {
@@ -141,10 +141,12 @@ export default {
     font-weight: bold;
     margin: 8px;
     cursor: pointer;
-    ${({ login, logout }) => {
-      if (login) {
+    //styled-components가 알 수 없는 속성 'login'을 전달하려 해 React콘솔에서 오류를 일으킬 수 있다.
+    //transient props를 사용해 앞에 $를 붙여 해결
+    ${({ $login, $logout }) => {
+      if ($login) {
         return `color: black; background-color: white; border: 2px solid black;`;
-      } else if (logout) {
+      } else if ($logout) {
         return `color: white; background-color: black; border: 2px solid black;`;
       }
     }}

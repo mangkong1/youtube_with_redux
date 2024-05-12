@@ -14,7 +14,6 @@ const initialState: SubscribeState = {
 };
 
 export const subscribeStateReducer = (state: SubscribeState = initialState, action: SubscribeAction) => {
-  console.log(state);
   switch (action.type) {
     case "SET_SUBSCRIBE_STATE":
       return { ...state, subscribeState: !state.subscribeState };

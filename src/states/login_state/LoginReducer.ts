@@ -15,7 +15,6 @@ const initialState: State = {
 
 export const reducer = (state: State = initialState, action: Action) => {
   //state는 이전 것을 그대로 가져오면서 초기 값을 null로 가져오고 싶으면 initialState를 정의해 놓는 것이 좋다
-  console.log(state);
 
   switch (action.type) {
     case "SET_USER_DATA":

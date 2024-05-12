@@ -1,11 +1,12 @@
 import { useState } from "react";
 
 import S from "../styles/ChannelVideoSortBtnStyle";
-import useSortState from "../hooks/UseSortState";
+// import useSortState from "../hooks/UseSortState";
+import useChangeBtn from "../hooks/UseChangeSortBtn";
 
 const ChannelVideoSortBtns = () => {
-  const { sortByTime, sortByView } = useSortState();
-  const [activeButton, setActiveButton] = useState<string | null>(null);
+  const { sortByTime, sortByView } = useChangeBtn();
+  const [activeButton, setActiveButton] = useState<string>("time");
 
   const handleClick = (sortFunction: () => void, buttonName: string) => {
     sortFunction();

@@ -13,6 +13,8 @@ import SoundSearchIcon from "./assets/images/mic.png";
 import useLogin from "./hooks/UseLogin";
 import useLogout from "./hooks/UseLogout";
 
+import useAsideExpand from "../aside/hooks/UseAsideExpand";
+
 interface HeaderProps {
   userReducer: UserDataProps;
 }
@@ -27,11 +29,13 @@ const Header = () => {
   const requestLogout = useLogout();
   //userData현재 null값으로 나옴
 
+  const [asideExpand, toggleAsideExpand] = useAsideExpand();
+
   return (
     <>
       <S.HeaderContainer>
         <S.HeaderLeft>
-          <S.MenuIcon src={ListIcon} />
+          <S.MenuIcon onClick={toggleAsideExpand} src={ListIcon} />
           <Link to="/">
             <S.YoutubeLogo src={YoutubeLogo} />
           </Link>
@@ -59,12 +63,12 @@ const Header = () => {
           {userData ? (
             <>
               <S.Profile src={Profile} />
-              <S.LoginBtn logout onClick={requestLogout}>
+              <S.LoginBtn $logout onClick={requestLogout}>
                 로그아웃
               </S.LoginBtn>
             </>
           ) : (
-            <S.LoginBtn login onClick={requestLogin}>
+            <S.LoginBtn $login onClick={requestLogin}>
               로그인
             </S.LoginBtn>
           )}
