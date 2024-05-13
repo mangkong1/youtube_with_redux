@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import S from "../styles/ChannelVideoStyle";
 import DotIcon from "../assets/images/dot.png";
 
-import useWeeksAgo from "../../../hooks/WeeksAgo";
-import useFormatViews from "../../../hooks/FormatView";
+import useWeeksAgo from "../../../shared/hooks/WeeksAgo";
+import useFormatViews from "../../../shared/hooks/FormatView";
 
 interface ChannelHomeElemProps {
   data: {

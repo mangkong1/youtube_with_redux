@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import AsideElem from "../views/AsideElem";
 
 export default {
   AsideContainer: styled.aside`
@@ -12,10 +11,6 @@ export default {
     /* css변수 선언으로 header-height값과 동일하게 맞춰줘야함 */
     top: 56px;
     z-index: 1;
-
-    a {
-      text-decoration: none;
-    }
   `,
 
   AsideInfo: styled.div`

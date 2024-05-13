@@ -6,7 +6,7 @@ import AsideData from "./services/AsideData";
 import AsideElem from "./views/AsideElem";
 import AsideExpandElem from "./views/AsideExpandElem";
 // import useAsideExpand from "./hooks/UseAsideExpand";
-import useAsideExpandState from "../../states/aside_expand_state/UseAsideExpandAtom";
+import useAsideExpandState from "../../shared/states/aside_expand_state/UseAsideExpandAtom";
 
 const Aside = () => {
   // const [asideExpanded, toggleAsideExpand] = useAsideExpand();

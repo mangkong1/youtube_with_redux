@@ -19,10 +19,8 @@ export const reducer = (state: State = initialState, action: Action) => {
   switch (action.type) {
     case "SET_USER_DATA":
       return { ...state, user_data: action.data };
-      break;
     case "DELETE_USER_DATA":
       return { ...state, user_data: null };
-      break;
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import { deleteUserData } from "../../../states/login_state/LoginAction";
+import { deleteUserData } from "../../../shared/states/login_state/LoginAction";
 
 const useLogout = () => {
   const dispatch = useDispatch();
