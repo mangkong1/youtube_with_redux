@@ -16,10 +16,10 @@ const ChannelVideoSortBtns = () => {
   return (
     <>
       <S.ChannelVideoSortBtnContainer>
-        <S.ChannelVideoSortBtn isActive={activeButton === "time"} onClick={() => handleClick(sortByTime, "time")}>
+        <S.ChannelVideoSortBtn $isActive={activeButton === "time"} onClick={() => handleClick(sortByTime, "time")}>
           최신순
         </S.ChannelVideoSortBtn>
-        <S.ChannelVideoSortBtn isActive={activeButton === "view"} onClick={() => handleClick(sortByView, "view")}>
+        <S.ChannelVideoSortBtn $isActive={activeButton === "view"} onClick={() => handleClick(sortByView, "view")}>
           조회수순
         </S.ChannelVideoSortBtn>
       </S.ChannelVideoSortBtnContainer>

@@ -1,14 +1,18 @@
 import { atom, useRecoilState } from "recoil";
 
-const useAsideExpandState = () => {
-  const isExpandedState = atom({
-    key: "isExpandState", // 변경된 키
-    default: false,
-  });
+const isExpandedState = atom({
+  key: "isExpandState",
+  default: false,
+});
 
+const useAsideExpandState = (): [boolean, () => void] => {
   const [isExpanded, setIsExpanded] = useRecoilState(isExpandedState);
 
-  return [isExpanded, setIsExpanded];
+  const toggleAsideExpand = () => {
+    setIsExpanded((prevState) => !prevState); // 상태를 이전 상태의 반대로 설정
+  };
+
+  return [isExpanded, toggleAsideExpand];
 };
 
 export default useAsideExpandState;

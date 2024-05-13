@@ -1,6 +1,7 @@
 import S from "./styles";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { SetterOrUpdater } from "recoil";
 
 import ListIcon from "./assets/images/list.png";
 import YoutubeLogo from "./assets/images/yt_logo.png";
@@ -13,7 +14,8 @@ import SoundSearchIcon from "./assets/images/mic.png";
 import useLogin from "./hooks/UseLogin";
 import useLogout from "./hooks/UseLogout";
 
-import useAsideExpand from "../aside/hooks/UseAsideExpand";
+// import useAsideExpand from "../aside/hooks/UseAsideExpand";
+import useAsideExpandState from "../../states/aside_expand_state/UseAsideExpandAtom";
 
 interface HeaderProps {
   userReducer: UserDataProps;
@@ -28,8 +30,7 @@ const Header = () => {
   const requestLogin = useLogin();
   const requestLogout = useLogout();
   //userData현재 null값으로 나옴
-
-  const [asideExpand, toggleAsideExpand] = useAsideExpand();
+  const [, toggleAsideExpand] = useAsideExpandState();
 
   return (
     <>

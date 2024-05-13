@@ -7,7 +7,7 @@ export default {
     padding: 12px 0 0 0;
   `,
 
-  ChannelVideoSortBtn: styled.button<{ isActive: boolean }>`
+  ChannelVideoSortBtn: styled.button<{ $isActive: boolean }>`
     margin-right: 12px;
     padding: 8px 12px;
     border: 1px solid black;
@@ -18,7 +18,7 @@ export default {
     cursor: pointer;
 
     ${(props) =>
-      props.isActive &&
+      props.$isActive &&
       css`
         background-color: gray;
         color: white;

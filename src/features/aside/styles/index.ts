@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AsideElem from "../views/AsideElem";
 
 export default {
   AsideContainer: styled.aside`
