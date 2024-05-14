@@ -68,6 +68,7 @@ export default {
   `,
 
   SearchWord: styled.p`
+    white-space: nowrap;
     display: inline-block;
     text-align: start;
     width: 99%;
@@ -135,6 +136,7 @@ export default {
   `,
 
   LoginBtn: styled.button<LoginButtonProps>`
+    white-space: nowrap;
     border-radius: 20px;
     padding: 8px;
     font-size: 16px;

@@ -2,7 +2,7 @@ import { atom, useRecoilState } from "recoil";
 
 const isExpandedState = atom({
   key: "isExpandState",
-  default: false,
+  default: true,
 });
 
 const useAsideExpandState = (): [boolean, () => void] => {

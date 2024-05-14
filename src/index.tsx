@@ -1,9 +1,9 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import App from "./app/App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { Store } from "./shared/states";
+import { Store } from "./shared";
+import { GlobalStyle } from "./app/GlobalStyle";
 import { RecoilRoot } from "recoil";
 
 const rootElement = document.getElementById("root");
@@ -14,6 +14,7 @@ if (rootElement) {
       <BrowserRouter>
         <RecoilRoot>
           <Provider store={Store}>
+            <GlobalStyle />
             <App />
           </Provider>
         </RecoilRoot>

@@ -4,19 +4,22 @@ import hateIcon from "./assets/images/hate_icon.png";
 import commentIcon from "./assets/images/comment_icon.png";
 import shareIcon from "./assets/images/share_icon.png";
 import moreIcon from "./assets/images/more_icon.png";
-import useChangeBtnState from "./hooks/ShortsBtnsHooks";
+
+import useLikeBtnState from "../../shared/shorts_btn_state/UseLikeBtnAtom";
+import useHateBtnState from "../../shared/shorts_btn_state/UseHateBtnAtom";
 
 const ShortsBtns = () => {
-  const { isLike, isHate, likeCount, handleLikeActive, handleHateActive } = useChangeBtnState();
+  const [isLike, likeCount, handleLikeState] = useLikeBtnState();
+  const [isHate, handleHateState] = useHateBtnState();
 
   return (
     <S.ShortsBtnContainer>
-      <S.ShortsBtn className={isLike ? "active" : ""} onClick={handleLikeActive}>
+      <S.ShortsBtn className={isLike ? "active" : ""} onClick={handleLikeState}>
         <S.ShortsBtnImg src={likeIcon} />
       </S.ShortsBtn>
       <S.ShortsBtnInfo>{likeCount}</S.ShortsBtnInfo>
 
-      <S.ShortsBtn className={isHate ? "active" : ""} onClick={handleHateActive}>
+      <S.ShortsBtn className={isHate ? "active" : ""} onClick={handleHateState}>
         <S.ShortsBtnImg src={hateIcon} />
       </S.ShortsBtn>
       <S.ShortsBtnInfo>싫어요</S.ShortsBtnInfo>

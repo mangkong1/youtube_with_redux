@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import { setUserData } from "../../../shared/states/login_state/LoginAction";
+import { setUserData } from "../../../shared/login_state/LoginAction";
 
 const useLogin = () => {
   const dispatch = useDispatch();

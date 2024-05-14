@@ -5,22 +5,38 @@ import S from "./styles";
 import AsideData from "./services/AsideData";
 import AsideElem from "./views/AsideElem";
 import AsideExpandElem from "./views/AsideExpandElem";
-// import useAsideExpand from "./hooks/UseAsideExpand";
-import useAsideExpandState from "../../shared/states/aside_expand_state/UseAsideExpandAtom";
+
+import useAsideExpandState from "../../shared/aside_expand_state/UseAsideExpandAtom";
 
 const Aside = () => {
-  // const [asideExpanded, toggleAsideExpand] = useAsideExpand();
   const [asideExpanded] = useAsideExpandState() as [boolean, SetterOrUpdater<boolean>];
 
   return (
     <>
-      <S.AsideContainer>
+      {asideExpanded ? (
+        <S.AsideContainer>
+          {AsideData.map((data) => (
+            <Link key={data.id} to={data.path}>
+              <AsideElem data={data} />
+            </Link>
+          ))}
+        </S.AsideContainer>
+      ) : (
+        <S.AsideExpandContainer>
+          {AsideData.map((data) => (
+            <Link key={data.id} to={data.path}>
+              <AsideExpandElem data={data} />
+            </Link>
+          ))}
+        </S.AsideExpandContainer>
+      )}
+      {/* <S.AsideContainer asideExpanded={asideExpanded}>
         {AsideData.map((data) => (
           <Link key={data.id} to={data.path}>
-            {asideExpanded ? <AsideExpandElem data={data} /> : <AsideElem data={data} />}
+            <AsideElem data={data} />
           </Link>
         ))}
-      </S.AsideContainer>
+      </S.AsideContainer> */}
     </>
   );
 };

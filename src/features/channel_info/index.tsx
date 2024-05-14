@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import S from "./styles";
 import Data from "./services/ChannelInfoData";
 
-import ToggleBtn from "../../components/onoff_btn/";
+import ToggleBtn from "../../shared/onoff_btn";
 
 interface SubscribeStateProps {
   subscribeReducer: ChannelInfoProps;

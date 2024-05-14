@@ -5,8 +5,6 @@ export default {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    position: relative;
     margin-top: 56px;
-    margin-left: 72px;
   `,
 };

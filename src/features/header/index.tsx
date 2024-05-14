@@ -14,7 +14,7 @@ import useLogin from "./hooks/UseLogin";
 import useLogout from "./hooks/UseLogout";
 
 // import useAsideExpand from "../aside/hooks/UseAsideExpand";
-import useAsideExpandState from "../../shared/states/aside_expand_state/UseAsideExpandAtom";
+import useAsideExpandState from "@shared/aside_expand_state/UseAsideExpandAtom";
 
 interface HeaderProps {
   userReducer: UserDataProps;
