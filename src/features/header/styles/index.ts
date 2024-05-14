@@ -133,6 +133,7 @@ export default {
     width: 24px;
     height: 24px;
     margin: 8px;
+    cursor: pointer;
   `,
 
   LoginBtn: styled.button<LoginButtonProps>`

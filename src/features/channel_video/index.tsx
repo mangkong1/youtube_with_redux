@@ -4,7 +4,7 @@ import Data from "./services/ChannelVideoData";
 import S from "./styles/ChannelVideoStyle";
 import ChannelVideoElem from "./views/ChannelVideoElem";
 import ChannelVideoSortBtns from "./views/ChannelVideoSortBtn";
-import useSortState from "../../shared/sort_btn_state/UseSortBtnAtom";
+import useSortState from "../../shared/UseSortBtnAtom";
 
 const ChannelVideo = () => {
   const { channelName } = useParams(); // URL에서 channelName 부분을 추출

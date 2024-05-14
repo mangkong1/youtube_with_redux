@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import S from "./styles";
 
 import { DataType } from "../../features/channel_home/services/ChannelHomeData";
-import { setSubscribeState } from "../subscribe_state/SubscribeStateAction";
+import { setSubscribeState } from "../SubscribeStateAction";
 
 interface SetSubscribeStateProps {
   subscribeState: boolean;

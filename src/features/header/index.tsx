@@ -1,5 +1,4 @@
 import S from "./styles";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import ListIcon from "./assets/images/list.png";
@@ -8,28 +7,18 @@ import KeyBoard from "./assets/images/keyboard.png";
 import SearchIcon from "./assets/images/search.png";
 import Profile from "./assets/images/profile.jpeg";
 import Camcoder from "./assets/images/camcoder.png";
-import Bell from "./assets/images/bell.png";
 import SoundSearchIcon from "./assets/images/mic.png";
-import useLogin from "./hooks/UseLogin";
-import useLogout from "./hooks/UseLogout";
+import NotifyIcon from "./assets/images/notify.svg";
+import NotifyOffIcon from "./assets/images/notify_off.svg";
+import useNotifyState from "./hooks/UseNotifyState";
 
-// import useAsideExpand from "../aside/hooks/UseAsideExpand";
-import useAsideExpandState from "@shared/aside_expand_state/UseAsideExpandAtom";
-
-interface HeaderProps {
-  userReducer: UserDataProps;
-}
-
-interface UserDataProps {
-  user_data: any | null;
-}
+import useLoginState from "@shared/UseLoginAtom";
+import useAsideExpandState from "@shared/UseAsideExpandAtom";
 
 const Header = () => {
-  const userData = useSelector((state: HeaderProps) => state.userReducer.user_data); //combineReducers 사용시 state를 이런 식으로 불러오는
-  const requestLogin = useLogin();
-  const requestLogout = useLogout();
-  //userData현재 null값으로 나옴
+  const [login, loginAction, logoutAction] = useLoginState();
   const [, toggleAsideExpand] = useAsideExpandState();
+  const [notify, notifyAction] = useNotifyState();
 
   return (
     <>
@@ -59,16 +48,16 @@ const Header = () => {
 
         <S.HeaderRight>
           <S.HeaderIcon src={Camcoder} />
-          <S.HeaderIcon src={Bell} />
-          {userData ? (
+          {notify ? <S.HeaderIcon src={NotifyIcon} onClick={notifyAction} /> : <S.HeaderIcon src={NotifyOffIcon} onClick={notifyAction} />}
+          {login ? (
             <>
               <S.Profile src={Profile} />
-              <S.LoginBtn $logout onClick={requestLogout}>
+              <S.LoginBtn $logout onClick={logoutAction}>
                 로그아웃
               </S.LoginBtn>
             </>
           ) : (
-            <S.LoginBtn $login onClick={requestLogin}>
+            <S.LoginBtn $login onClick={loginAction}>
               로그인
             </S.LoginBtn>
           )}
