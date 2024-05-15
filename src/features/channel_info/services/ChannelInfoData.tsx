@@ -12,7 +12,7 @@ export type DataType = {
   subscribeState: boolean;
 };
 
-const Data: DataType[] = [
+export const Data: DataType[] = [
   {
     id: 1,
     channelMainImgSrc: require("../../../assets/images/essential_channel_main_img.jpeg"),
@@ -146,5 +146,3 @@ const Data: DataType[] = [
     subscribeState: false,
   },
 ];
-
-export default Data;

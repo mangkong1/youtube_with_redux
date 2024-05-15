@@ -1,9 +1,9 @@
 import S from "./styles";
 
 import useSortedData from "./hooks/UseSortedData";
-
-import MainElem from "../../features/main";
 import Data from "./services/MainPageData";
+
+import MainElem from "@features/main";
 
 const MainPage = () => {
   const sortedData = useSortedData(Data);

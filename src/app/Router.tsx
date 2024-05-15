@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
-import MainPage from "../pages/main_page";
-import ShortsPage from "../pages/shorts_page";
-import ChannelPage from "../pages/channel_page";
+import MainPage from "@pages/main_page";
+import ShortsPage from "@pages/shorts_page";
+import ChannelPage from "@pages/channel_page";
 
 const Router = () => {
   return (

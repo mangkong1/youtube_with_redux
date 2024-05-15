@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import S from "../styles";
 
-import ShortsBtns from "../../../features/shorts_btns";
+import ShortsBtns from "@features/shorts_btns";
 
 interface ShortsElemProps {
   data: {

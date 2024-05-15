@@ -1,27 +1,31 @@
-import { useDispatch } from "react-redux";
+import { atom, useRecoilState } from "recoil";
 
 import S from "./styles";
 
-import { DataType } from "../../features/channel_home/services/ChannelHomeData";
-import { setSubscribeState } from "../SubscribeStateAction";
+// import { DataType } from "@features/channel_home/services/ChannelHomeData";
 
 interface SetSubscribeStateProps {
-  subscribeState: boolean;
-  data: DataType; // DataType은 이전에 정의한 타입입니다.
+  // subscribeState: boolean;
+  // data: DataType; // DataType은 이전에 정의한 타입입니다.
   toggleOnText: string;
   toggleOffText: string;
 }
 
-const ToggleBtn = (props: SetSubscribeStateProps) => {
-  const dispatch = useDispatch(); // 리덕스 store상태 변경 가능
+const toggleState = atom({
+  key: "toggleState",
+  default: false,
+});
 
-  const handleSubscribe = () => {
-    dispatch(setSubscribeState(!props.subscribeState));
+const ToggleBtn: React.FC<SetSubscribeStateProps> = ({ toggleOnText, toggleOffText }) => {
+  const [toggle, setToggle] = useRecoilState(toggleState);
+
+  const toggleActive = () => {
+    setToggle(!toggle);
   };
-  // $active는 styled-components에서 props를 받아서 css를 적용할 때 사용하는 문법입니다.
+
   return (
-    <S.ToggleBtnContainer $active={props.subscribeState} onClick={handleSubscribe}>
-      {props.subscribeState ? props.toggleOnText : props.toggleOffText}
+    <S.ToggleBtnContainer $active={toggle} onClick={toggleActive}>
+      {toggle ? toggleOnText : toggleOffText}
     </S.ToggleBtnContainer>
   );
 };
