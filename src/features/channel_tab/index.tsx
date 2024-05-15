@@ -1,7 +1,7 @@
 import S from "./styles";
 import tabs from "./services/ChannelTabData";
 
-import useChangeTab from "@shared/UseChangeTabAtom";
+import useChangeTab from "./hooks/UseChangeTabHook";
 
 const ChannelTab = () => {
   const [activeTab, handleActiveTab] = useChangeTab();

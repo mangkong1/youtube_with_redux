@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import S from "../styles/ChannelVideoSortBtnStyle";
 
-import useSortState from "@shared/UseSortBtnAtom";
+import useSortState from "@shared/states/UseSortBtnAtom";
 
 const ChannelVideoSortBtns = () => {
   const [, sortByTime, sortByView] = useSortState(); //순서 중요함

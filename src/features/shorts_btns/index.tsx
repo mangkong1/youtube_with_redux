@@ -5,8 +5,8 @@ import commentIcon from "./assets/images/comment_icon.png";
 import shareIcon from "./assets/images/share_icon.png";
 import moreIcon from "./assets/images/more_icon.png";
 
-import useLikeBtnState from "@shared/UseLikeBtnAtom";
-import useHateBtnState from "@shared/UseHateBtnAtom";
+import useLikeBtnState from "@shared/states/UseLikeBtnAtom";
+import useHateBtnState from "@shared/states/UseHateBtnAtom";
 
 const ShortsBtns = () => {
   const [isLike, likeCount, handleLikeState] = useLikeBtnState();

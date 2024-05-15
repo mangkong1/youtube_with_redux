@@ -28,7 +28,7 @@ const MainElem: React.FC<MainElemProps> = (props) => {
       <S.MainSection>
         <S.Thumbnail src={thumbnailSrc} />
         <S.VideoInfoContainer>
-          <Link to={channelName}>
+          <Link to={`${channelName}/home`}>
             <S.ChannelImg src={channelImgSrc} />
           </Link>
           <S.VideoInfo>

@@ -6,7 +6,7 @@ import AsideData from "./services/AsideData";
 import AsideElem from "./views/AsideElem";
 import AsideExpandElem from "./views/AsideExpandElem";
 
-import useAsideExpandState from "@shared/UseAsideExpandAtom";
+import useAsideExpandState from "@shared/states/UseAsideExpandAtom";
 
 const Aside = () => {
   const [asideExpanded] = useAsideExpandState() as [boolean, SetterOrUpdater<boolean>];

@@ -12,8 +12,8 @@ import NotifyIcon from "./assets/images/notify.svg";
 import NotifyOffIcon from "./assets/images/notify_off.svg";
 import useNotifyState from "./hooks/UseNotifyState";
 
-import useLoginState from "@shared/UseLoginAtom";
-import useAsideExpandState from "@shared/UseAsideExpandAtom";
+import useLoginState from "@shared/states/UseLoginAtom";
+import useAsideExpandState from "@shared/states/UseAsideExpandAtom";
 
 const Header = () => {
   const [login, loginAction, logoutAction] = useLoginState();
