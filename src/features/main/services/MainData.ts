@@ -75,7 +75,7 @@ const Data: DataType[] = [
     thumbnailSrc: require("../../../assets/images/chungju_thumb_img3.jpg"),
     title: "충주시 게시물 제목입니다3",
     channelName: "충주시",
-    views: 84009,
+    views: 8409,
     uploadDate: "2024-04-16",
     subscribeState: true,
   },

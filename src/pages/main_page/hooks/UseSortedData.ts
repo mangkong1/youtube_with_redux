@@ -12,10 +12,16 @@ type DataType = {
   subscribeState: boolean;
 };
 
-const useSortedData = (props: DataType[]): DataType[] => {
+const useSortedData = (props: DataType[], sort: string): DataType[] => {
   const sortedData = useMemo(() => {
-    return [...props].sort((a, b) => new Date(b.uploadDate).getTime() - new Date(a.uploadDate).getTime());
-  }, [props]);
+    if (sort === "view") {
+      return [...props].sort((a, b) => b.views - a.views);
+    } else if (sort === "time") {
+      return [...props].sort((a, b) => new Date(b.uploadDate).getTime() - new Date(a.uploadDate).getTime());
+    } else {
+      return props;
+    }
+  }, [props, sort]);
 
   return sortedData;
 };

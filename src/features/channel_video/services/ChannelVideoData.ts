@@ -1,6 +1,6 @@
 // require은 간결하고 직관적이지만 webpack이나 Parcel 같은 번들러가 빌드할 때 모든 이미지를 포함하므로 속도 느리다
 // import를 사용하면 필요한 이미지만 포함할 수 있어 빌드 속도가 빨라진다. 하지만 비동기 개념이 들어가므로 나중에 사용예정
-export type DataType = {
+export interface DataType {
   id: number;
   channelMainImgSrc: string;
   channelImgSrc: string;
@@ -10,7 +10,7 @@ export type DataType = {
   views: number;
   uploadDate: string;
   subscribeState: boolean;
-};
+}
 
 const Data: DataType[] = [
   {
@@ -75,7 +75,7 @@ const Data: DataType[] = [
     thumbnailSrc: require("../../../assets/images/chungju_thumb_img3.jpg"),
     title: "충주시 게시물 비디오 제목입니다3",
     channelName: "충주시",
-    views: 84009,
+    views: 8409,
     uploadDate: "2024-04-16",
     subscribeState: true,
   },

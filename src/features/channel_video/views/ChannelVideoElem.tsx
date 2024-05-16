@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import S from "../styles/ChannelVideoStyle";
+import S from "../styles";
 import DotIcon from "../assets/images/dot.png";
 
 import useWeeksAgo from "@shared/hooks/WeeksAgo";

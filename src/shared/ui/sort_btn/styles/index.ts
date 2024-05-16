@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components";
 
 export default {
-  ChannelVideoSortBtnContainer: styled.div`
+  SortBtnContainer: styled.div`
     display: flex;
     width: 100%;
     padding: 12px 0 0 0;
   `,
 
-  ChannelVideoSortBtn: styled.button<{ $isActive: boolean }>`
+  SortBtn: styled.button<{ $isActive: boolean }>`
     margin-right: 12px;
     padding: 8px 12px;
     border: 1px solid black;

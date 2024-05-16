@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default {
   MainSection: styled.section`
-    margin: 24px 12px;
+    margin: 24px 24px 24px 0;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 350px;

@@ -10,6 +10,7 @@ type DataType = {
   views: number;
   uploadDate: string;
   subscribeState: boolean;
+  contentType: string;
 };
 
 const Data: DataType[] = [
@@ -23,6 +24,7 @@ const Data: DataType[] = [
     views: 50345,
     uploadDate: "2024-04-01",
     subscribeState: false,
+    contentType: "music",
   },
   {
     id: 2,
@@ -34,6 +36,7 @@ const Data: DataType[] = [
     views: 46034,
     uploadDate: "2024-04-08",
     subscribeState: false,
+    contentType: "music",
   },
   {
     id: 3,
@@ -45,6 +48,7 @@ const Data: DataType[] = [
     views: 35078,
     uploadDate: "2024-04-15",
     subscribeState: false,
+    contentType: "human",
   },
   {
     id: 4,
@@ -56,6 +60,7 @@ const Data: DataType[] = [
     views: 11078,
     uploadDate: "2024-04-02",
     subscribeState: true,
+    contentType: "animal",
   },
   {
     id: 5,
@@ -67,6 +72,7 @@ const Data: DataType[] = [
     views: 60037,
     uploadDate: "2024-04-09",
     subscribeState: true,
+    contentType: "animal",
   },
   {
     id: 6,
@@ -75,9 +81,10 @@ const Data: DataType[] = [
     thumbnailSrc: require("../../../assets/images/chungju_thumb_img3.jpg"),
     title: "충주시 게시물 제목입니다3",
     channelName: "충주시",
-    views: 84009,
+    views: 8409,
     uploadDate: "2024-04-16",
     subscribeState: true,
+    contentType: "human",
   },
   {
     id: 7,
@@ -89,6 +96,7 @@ const Data: DataType[] = [
     views: 22033,
     uploadDate: "2024-04-03",
     subscribeState: true,
+    contentType: "music",
   },
   {
     id: 8,
@@ -100,6 +108,7 @@ const Data: DataType[] = [
     views: 3120,
     uploadDate: "2024-04-10",
     subscribeState: true,
+    contentType: "coding",
   },
   {
     id: 9,
@@ -111,6 +120,7 @@ const Data: DataType[] = [
     views: 48000,
     uploadDate: "2024-03-17",
     subscribeState: true,
+    contentType: "coding",
   },
   {
     id: 10,
@@ -122,6 +132,7 @@ const Data: DataType[] = [
     views: 15000,
     uploadDate: "2024-04-04",
     subscribeState: true,
+    contentType: "baseball",
   },
   {
     id: 11,
@@ -133,6 +144,7 @@ const Data: DataType[] = [
     views: 33000,
     uploadDate: "2024-04-11",
     subscribeState: true,
+    contentType: "baseball",
   },
   {
     id: 12,
@@ -144,6 +156,7 @@ const Data: DataType[] = [
     views: 29000,
     uploadDate: "2024-03-18",
     subscribeState: true,
+    contentType: "music",
   },
 ];
 

@@ -1,10 +1,16 @@
 import styled from "styled-components";
 
 export default {
-  MainContainer: styled.main`
+  MainPageContainer: styled.main`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 56px;
+  `,
+
+  MainContainer: styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 56px;
   `,
 };

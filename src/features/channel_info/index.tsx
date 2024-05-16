@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import S from "./styles";
 import { Data } from "./services/ChannelInfoData";
 
-import ToggleBtn from "@shared/ui/toggle_btn";
+import ToggleBtn from "@shared/ui/onoff_btn";
 
 const ChannelInfo = () => {
   const { channelName } = useParams();

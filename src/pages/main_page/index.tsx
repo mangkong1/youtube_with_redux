@@ -1,19 +1,18 @@
 import S from "./styles";
-
-import useSortedData from "./hooks/UseSortedData";
 import Data from "./services/MainPageData";
-
 import MainElem from "@features/main";
+import MainSortBtn from "@features/main_sort_btns";
 
 const MainPage = () => {
-  const sortedData = useSortedData(Data);
-
   return (
-    <S.MainContainer>
-      {sortedData.map((elem) => (
-        <MainElem key={elem.id} data={elem} />
-      ))}
-    </S.MainContainer>
+    <S.MainPageContainer>
+      <MainSortBtn />
+      <S.MainContainer>
+        {Data.map((elem) => (
+          <MainElem key={elem.id} data={elem} />
+        ))}
+      </S.MainContainer>
+    </S.MainPageContainer>
   );
 };
 

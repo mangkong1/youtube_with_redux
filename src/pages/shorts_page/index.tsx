@@ -3,7 +3,7 @@ import S from "./styles";
 import Data from "./services/ShortsPageData";
 import { DataType } from "./services/ShortsPageData"; // Import the DataType interface
 
-import ToggleBtn from "@shared/ui/toggle_btn";
+import ToggleBtn from "@shared/ui/onoff_btn";
 
 const ShortsPage = () => {
   const sortedData = [...Data].sort((a: DataType, b: DataType) => new Date(b.uploadDate).getTime() - new Date(a.uploadDate).getTime()); // date 기준으로 오름차순 정렬

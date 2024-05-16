@@ -16,7 +16,7 @@ const toggleState = atom({
   default: false,
 });
 
-const ToggleBtn: React.FC<SetSubscribeStateProps> = ({ toggleOnText, toggleOffText }) => {
+const OnOffBtn: React.FC<SetSubscribeStateProps> = ({ toggleOnText, toggleOffText }) => {
   const [toggle, setToggle] = useRecoilState(toggleState);
 
   const toggleActive = () => {
@@ -30,4 +30,4 @@ const ToggleBtn: React.FC<SetSubscribeStateProps> = ({ toggleOnText, toggleOffTe
   );
 };
 
-export default ToggleBtn;
+export default OnOffBtn;
