@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const useSortState = () => {
-  const [sort, setSort] = useState("time");
+const useChannelVideoSortedHook = (props: string) => {
+  const [sort, setSort] = useState(props);
 
   const sortOptions = [
     { name: "time", label: "최신순", sortFunction: () => setSort("time") },
@@ -11,4 +11,4 @@ const useSortState = () => {
   return [sort, sortOptions];
 };
 
-export default useSortState;
+export default useChannelVideoSortedHook;
