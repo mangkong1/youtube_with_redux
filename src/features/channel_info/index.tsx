@@ -1,14 +1,17 @@
-import { useParams } from "react-router-dom";
-
 import S from "./styles";
-import { Data } from "./services/ChannelInfoData";
 
 import ToggleBtn from "@shared/ui/onoff_btn";
 
-const ChannelInfo = () => {
-  const { channelName } = useParams();
-  const filteredData = Data.find((elem) => elem.channelName === channelName);
-  const { channelMainImgSrc, channelImgSrc } = filteredData || { channelMainImgSrc: "", channelImgSrc: "" };
+interface ChannelInfoProps {
+  data: {
+    channelMainImgSrc: string;
+    channelImgSrc: string;
+    channelName: string;
+  };
+}
+
+const ChannelInfo: React.FC<ChannelInfoProps> = (props) => {
+  const { channelMainImgSrc, channelImgSrc, channelName } = props.data;
 
   return (
     <>
