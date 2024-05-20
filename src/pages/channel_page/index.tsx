@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 
 const ChannelPage = () => {
   const { channelName } = useParams();
-  const { data } = useFetch("http://localhost:3001/channel");
+  const [data] = useFetch("http://localhost:3001/channel");
   const filteredData = data && (data as any[]).filter((elem: any) => elem.channelName === channelName);
 
   return (

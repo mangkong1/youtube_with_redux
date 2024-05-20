@@ -30,11 +30,31 @@
     }
   ],
   "tab": [
-    { "id": 1, "name": "홈", "path": "home" },
-    { "id": 2, "name": "동영상", "path": "video" },
-    { "id": 3, "name": "쇼츠", "path": "shorts" },
-    { "id": 4, "name": "라이브", "path": "live" },
-    { "id": 5, "name": "팟캐스트", "path": "podcast" }
+    {
+      "id": 1,
+      "name": "홈",
+      "path": "home"
+    },
+    {
+      "id": 2,
+      "name": "동영상",
+      "path": "video"
+    },
+    {
+      "id": 3,
+      "name": "쇼츠",
+      "path": "shorts"
+    },
+    {
+      "id": 4,
+      "name": "라이브",
+      "path": "live"
+    },
+    {
+      "id": 5,
+      "name": "팟캐스트",
+      "path": "podcast"
+    }
   ],
   "video": [
     {
@@ -44,7 +64,8 @@
       "title": "essential 게시물 비디오 제목입니다1",
       "channelName": "essential",
       "views": 50345,
-      "uploadDate": "2024-04-01"
+      "uploadDate": "2024-04-01",
+      "recommendState": true
     },
     {
       "id": 2,
@@ -53,7 +74,8 @@
       "title": "essential 게시물 비디오 제목입니다2",
       "channelName": "essential",
       "views": 46034,
-      "uploadDate": "2024-04-08"
+      "uploadDate": "2024-04-08",
+      "recommendState": false
     },
     {
       "id": 3,
@@ -62,106 +84,98 @@
       "title": "essential 게시물 비디오 제목입니다3",
       "channelName": "essential",
       "views": 35078,
-      "uploadDate": "2024-04-15"
+      "uploadDate": "2024-04-15",
+      "recommendState": false
     },
     {
       "id": 4,
-      "channelMainImgSrc": "/images/chungju_channel_main_img.png",
       "channelImgSrc": "/images/chungju_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/chungju_thumb_img1.webp",
       "title": "충주시 게시물 비디오 제목입니다1",
       "channelName": "충주시",
       "views": 11078,
       "uploadDate": "2024-04-02",
-      "subscribeState": true
+      "recommendState": true
     },
     {
       "id": 5,
-      "channelMainImgSrc": "/images/chungju_channel_main_img.png",
       "channelImgSrc": "/images/chungju_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/chungju_thumb_img2.jpg",
       "title": "충주시 게시물 비디오 제목입니다2",
       "channelName": "충주시",
       "views": 60037,
       "uploadDate": "2024-04-09",
-      "subscribeState": true
+      "recommendState": false
     },
     {
       "id": 6,
-      "channelMainImgSrc": "/images/chungju_channel_main_img.png",
       "channelImgSrc": "/images/chungju_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/chungju_thumb_img3.jpg",
       "title": "충주시 게시물 비디오 제목입니다3",
       "channelName": "충주시",
       "views": 8409,
       "uploadDate": "2024-04-16",
-      "subscribeState": true
+      "recommendState": false
     },
     {
       "id": 7,
-      "channelMainImgSrc": "/images/codingapple_channel_main_img.png",
       "channelImgSrc": "/images/codingapple_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/codingapple_thumb_img1.webp",
       "title": "코딩애플 게시물 비디오 제목입니다1",
       "channelName": "코딩애플",
       "views": 22033,
       "uploadDate": "2024-04-03",
-      "subscribeState": true
+      "recommendState": true
     },
     {
       "id": 8,
-      "channelMainImgSrc": "/images/codingapple_channel_main_img.png",
       "channelImgSrc": "/images/codingapple_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/codingapple_thumb_img2.jpg",
       "title": "코딩애플 게시물 비디오 제목입니다2",
       "channelName": "코딩애플",
       "views": 3120,
       "uploadDate": "2024-04-10",
-      "subscribeState": true
+      "recommendState": false
     },
     {
       "id": 9,
-      "channelMainImgSrc": "/images/codingapple_channel_main_img.png",
       "channelImgSrc": "/images/codingapple_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/codingapple_thumb_img3.jpg",
       "title": "코딩애플 게시물 비디오 제목입니다3",
       "channelName": "코딩애플",
       "views": 48000,
       "uploadDate": "2024-03-17",
-      "subscribeState": true
+      "recommendState": false
     },
     {
       "id": 10,
-      "channelMainImgSrc": "/images/kiatigers_channel_main_img.jpeg",
       "channelImgSrc": "/images/kiatigers_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/kiatigers_thumb_img1.jpg",
       "title": "기아타이거즈 게시물 비디오 제목입니다1",
       "channelName": "기아타이거즈",
       "views": 15000,
       "uploadDate": "2024-04-04",
-      "subscribeState": true
+      "recommendState": true
     },
     {
       "id": 11,
-      "channelMainImgSrc": "/images/kiatigers_channel_main_img.jpeg",
       "channelImgSrc": "/images/kiatigers_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/kiatigers_thumb_img2.jpg",
       "title": "기아타이거즈 게시물 비디오 제목입니다2",
       "channelName": "기아타이거즈",
       "views": 33000,
       "uploadDate": "2024-04-11",
-      "subscribeState": true
+      "recommendState": false
     },
     {
       "id": 12,
-      "channelMainImgSrc": "/images/kiatigers_channel_main_img.jpeg",
       "channelImgSrc": "/images/kiatigers_channel_profile_img.jpeg",
       "thumbnailSrc": "/images/kiatigers_thumb_img3.jpg",
       "title": "기아타이거즈 게시물 비디오 제목입니다3",
       "channelName": "기아타이거즈",
       "views": 29000,
       "uploadDate": "2024-03-18",
-      "subscribeState": true
+      "recommendState": false
     }
   ]
 }

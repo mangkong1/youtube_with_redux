@@ -6,7 +6,7 @@ import MainElem from "@features/main";
 import useFetch from "@shared/hooks/UseFetch";
 
 const MainPage = () => {
-  const { data } = useFetch("http://localhost:3001/video");
+  const [data] = useFetch("http://localhost:3001/video");
 
   return (
     <S.MainPageContainer>

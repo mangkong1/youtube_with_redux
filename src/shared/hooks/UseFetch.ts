@@ -20,7 +20,7 @@ const useFetch = (url: string) => {
     fetchData();
   }, [url]);
 
-  return { data };
+  return [data];
 };
 
 export default useFetch;
