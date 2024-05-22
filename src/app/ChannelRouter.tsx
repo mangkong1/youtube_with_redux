@@ -9,8 +9,8 @@ const ChannelRouter = () => (
     {tabs.map((tab) => (
       <Route key={tab.path} path={tab.path} element={tab.component} />
     ))}
-    <Route path="/:channelName/home" element={<ChannelHome />} />
-    <Route path="/:channelName/video" element={<ChannelVideo />} />
+    <Route path="home" element={<ChannelHome />} />
+    <Route path="video" element={<ChannelVideo />} />
   </Routes>
 );
 

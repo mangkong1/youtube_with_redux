@@ -1,6 +1,6 @@
-import S from "./styles";
+import { Outlet } from "react-router-dom";
 
-import ChannelRouter from "./views/ChannelRouter";
+import S from "./styles";
 
 import ChannelTab from "@features/channel_tab/";
 import ChannelInfo from "@features/channel_info/";
@@ -13,13 +13,15 @@ const ChannelPage = () => {
   const filteredData = data && (data as any[]).filter((elem: any) => elem.channelName === channelName);
 
   return (
-    <S.MainChannelContainer>
-      <S.ChannelContainer>
-        {filteredData && (filteredData as any[]).map((elem: any) => <ChannelInfo key={elem.id} data={elem} />)}
-        <ChannelTab />
-        <ChannelRouter />
-      </S.ChannelContainer>
-    </S.MainChannelContainer>
+    <>
+      <S.MainChannelContainer>
+        <S.ChannelContainer>
+          {filteredData && (filteredData as any[]).map((elem: any) => <ChannelInfo key={elem.id} data={elem} />)}
+          <ChannelTab />
+          <Outlet />
+        </S.ChannelContainer>
+      </S.MainChannelContainer>
+    </>
   );
 };
 

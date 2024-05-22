@@ -7,17 +7,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-        margin: 0;
-        padding: 0;
-      }
+    margin: 0;
+    padding: 0;
+  }
   
-      p,
-      h1,
-      h2,
-      h3 {
-        margin: 0;
-        padding: 0;
-        font-size: 16px;
-        font-weight: 400;
-      }
+  p,
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
 `;

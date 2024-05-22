@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import MainPage from "@pages/main_page";
 import ShortsPage from "@pages/shorts_page";
 import ChannelPage from "@pages/channel_page";
+import ChannelRouter from "@app/ChannelRouter";
 
 const Router = () => {
   return (
@@ -11,7 +12,9 @@ const Router = () => {
       <Route path="/shorts" element={<ShortsPage />} />
       <Route path="/subscribe" />
       <Route path="/mypage" />
-      <Route path="/:channelName/*" element={<ChannelPage />} />
+      <Route path="/:channelName/*" element={<ChannelPage />}>
+        <Route path="*" element={<ChannelRouter />} />
+      </Route>
     </Routes>
   );
 };
