@@ -148,9 +148,9 @@ export default {
     //transient props를 사용해 앞에 $를 붙여 해결
     ${({ $login, $logout }) => {
       if ($login) {
-        return `color: black; background-color: white; border: 2px solid black;`;
-      } else if ($logout) {
         return `color: white; background-color: black; border: 2px solid black;`;
+      } else if ($logout) {
+        return `color: black; background-color: white; border: 2px solid black;`;
       }
     }}
   `,

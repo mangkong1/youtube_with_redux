@@ -14,11 +14,14 @@ import useNotifyState from "./hooks/UseNotifyState";
 
 import useLoginState from "@shared/states/UseLoginAtom";
 import useAsideExpandState from "@shared/states/UseAsideExpandAtom";
+import LoginModal from "@features/login_modal";
+import useLoginModalOpenState from "@shared/states/UseLoginModalOpenAtom";
 
 const Header = () => {
   const [login, loginAction, logoutAction] = useLoginState();
   const [, toggleAsideExpand] = useAsideExpandState();
   const [notify, notifyAction] = useNotifyState();
+  const [modalOpen, clickModalOpen] = useLoginModalOpenState();
 
   return (
     <>
@@ -57,10 +60,11 @@ const Header = () => {
               </S.LoginBtn>
             </>
           ) : (
-            <S.LoginBtn $login onClick={loginAction}>
+            <S.LoginBtn $login onClick={() => clickModalOpen()}>
               로그인
             </S.LoginBtn>
           )}
+          {modalOpen && <LoginModal />}
         </S.HeaderRight>
       </S.HeaderContainer>
     </>
