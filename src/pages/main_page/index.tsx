@@ -3,10 +3,10 @@ import MainSortOption from "./services/MainSortOption";
 
 import SortBtn from "@shared/ui/sort_btn";
 import MainElem from "@features/main";
-import useFetch from "@shared/hooks/UseFetch";
+import useFetchGet from "@shared/hooks/UseFetchGet";
 
 const MainPage = () => {
-  const [data] = useFetch("http://localhost:3001/video");
+  const [data] = useFetchGet("http://localhost:3001/video");
 
   return (
     <S.MainPageContainer>

@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import S from "./styles";
 import ChannelHomeElem from "./views/ChannelHomeElem";
 
-import useFetch from "@shared/hooks/UseFetch";
+import useFetchGet from "@shared/hooks/UseFetchGet";
 
 const ChannelHome = () => {
   const { channelName } = useParams(); // URL에서 channelName 부분을 추출
-  const [data] = useFetch("http://localhost:3001/video");
+  const [data] = useFetchGet("http://localhost:3001/video");
   const filteredData = data && (data as any[]).filter((elem: any) => elem.channelName === channelName && elem.recommendState === true); // channelName과 일치하는 데이터만 필터링
 
   return (

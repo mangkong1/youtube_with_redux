@@ -1,26 +1,24 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const useFetch = (url: string) => {
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      //기본 method가 get이므로 생략가능, Contedt-Type헤더는 요청 본문이 있는 경우에만 필요
-      const response = await fetch(url, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+  const fetchData = async (method: string, body: any) => {
+    console.log(body);
 
-      const result = await response.json();
+    const response = await fetch(url, {
+      method: method,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    const result = await response.json();
 
-      setData(result);
-    };
+    setData(result);
+  };
 
-    fetchData();
-  }, [url]);
-
-  return [data];
+  return [data, fetchData];
 };
 
 export default useFetch;

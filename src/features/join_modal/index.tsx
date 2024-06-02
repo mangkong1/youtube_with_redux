@@ -3,28 +3,14 @@ import { useState } from "react";
 import S from "./styles";
 
 import useLoginModalOpenState from "@shared/states/UseLoginModalOpenAtom";
+import useFetchPost from "@shared/hooks/UseFetchPost";
 
 const JoinModal = () => {
   const [, clickModalOpen] = useLoginModalOpenState();
   const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
+  const [pw, setPassword] = useState("");
   const [name, setName] = useState("");
-
-  const handleJoin = async () => {
-    const response = await fetch("http://localhost:3000/channel", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: "id",
-        password: "password",
-        name: "name",
-      }),
-    });
-
-    const result = await response.json();
-  };
+  const [data, fetchData] = useFetchPost("http://www.stageus.co.kr:3000/channel");
 
   return (
     <S.ModalContainer>
@@ -32,9 +18,9 @@ const JoinModal = () => {
         <S.ModalCloseBtn onClick={() => clickModalOpen()}>X</S.ModalCloseBtn>
         <S.ModalTitle>회원가입</S.ModalTitle>
         <S.ModalInput placeholder="아이디" value={id} onChange={(e) => setId(e.target.value)} />
-        <S.ModalInput placeholder="비밀번호" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <S.ModalInput placeholder="비밀번호" value={pw} onChange={(e) => setPassword(e.target.value)} />
         <S.ModalInput placeholder="이름" value={name} onChange={(e) => setName(e.target.value)} />
-        <S.ModalBtn onClick={handleJoin}>회원가입</S.ModalBtn>
+        <S.ModalBtn onClick={() => fetchData && fetchData(id, pw, name)}>회원가입</S.ModalBtn>
       </S.ModalContent>
     </S.ModalContainer>
   );
